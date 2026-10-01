@@ -1,0 +1,19 @@
+import Ejercitacion.pepita.* 
+import Ejercitacion.rosario
+
+
+describe "Tests de pepita" {
+
+    test "pepita tiene energia inicial de 100 Joules" {
+       assert.equals(100, Ejercitacion.pepita.energia())
+    }
+
+    test "que pepita vuele 10km le consume 20 Joules" {
+        Ejercitacion.pepita.volar(10)
+        assert.equals(80, Ejercitacion.pepita.energia())
+    }
+    test "pepita no puede ir a rosario" {
+        assert.notThat( Ejercitacion.pepita.puedeIr(rosario))
+    }
+}
+

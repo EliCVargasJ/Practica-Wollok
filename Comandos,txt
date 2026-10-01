@@ -1,0 +1,8 @@
+1.  Iniciar una sesion RPL con Ctrl + Shift + P -> Wollok: Start new REPL session.
+
+Comandos de la consola de wlk: 
+
+1. Recargar un archivo modificado -> :r o :reload
+2. Recargar y volver a ejecutar la ultima sesion: :rr o :rerun
+3. Terminar la sesion -> :q o :quit
+4. Menu de ayuda -> :h o :help
