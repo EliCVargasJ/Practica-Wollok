@@ -1,5 +1,5 @@
 // EJercicio 1 : Pepita basica 
-
+/*
 object pepita {
     var energia = 100
     var ubicacion = buenosAires
@@ -35,7 +35,7 @@ object rosario {
 object cordoba {
     method kilometro() = 400
 }
-
+*/
 /*
     ¿Qué objeto se debe encargar del cálculo de la distancia entre dos lugares?
     
@@ -50,5 +50,35 @@ object cordoba {
 
 // Ejercicio 2: Tom y Jerry 
 
+
+object tom { 
+    var energia = 100
+
+    method energia () {
+        return energia }
+
+    method comer (raton) {
+        energia += 12 + raton.peso()
+    }
+
+    method velocidad () = 5 + energia/10
+
+    method correr(segundos){
+        energia -= 0.5 * self.velocidad() * segundos 
+    }
+    method energiaQueGastaCorriendo(unaDistancia) = 0.5 * unaDistancia
+
+    method energiaQueGanaComiendo(unRaton) = 12 + unRaton.peso()
+
+    method meConvieneComerRatonA(unRaton,unaDistancia) = self.energiaQueGanaComiendo(unRaton) > self.energiaQueGastaCorriendo(unaDistancia)
+  
+    
+}
+
+object raton {
+    const peso = 50
+    method peso() = peso 
+      
+}
 
 

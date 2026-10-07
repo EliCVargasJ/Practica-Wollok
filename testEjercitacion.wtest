@@ -1,7 +1,7 @@
-import Ejercitacion.pepita.* 
-import Ejercitacion.rosario
 
+import Ejercitacion.*  
 
+/*
 describe "Tests de pepita" {
 
     test "pepita tiene energia inicial de 100 Joules" {
@@ -16,4 +16,28 @@ describe "Tests de pepita" {
         assert.notThat( Ejercitacion.pepita.puedeIr(rosario))
     }
 }
+*/
 
+describe "Tests de Tom" {
+
+    test "Tom tiene energia inicial de 100 Joules" {
+        assert.equals(100,Ejercitacion.tom.energia())
+    }
+    test "Tom tiene velocidad inicial 15" {
+        assert.equals(15, Ejercitacion.tom.velocidad())
+    }
+    test "Comer un raton le aumenta la energia a Tom a 162 Joules " {
+        Ejercitacion.tom.comer(raton)
+        assert.equals(162, Ejercitacion.tom.energia())
+    }
+    test "Si tom corre 10 segundos, su energia disminuye a 25" {
+        Ejercitacion.tom.correr(10)
+        assert.equals(25, Ejercitacion.tom.energia())
+    }
+    test "A tom le conviene comer un raton de 50g a una distancia de 20 m" {
+        assert.that(Ejercitacion.tom.meConvieneComerRatonA(raton,20))
+    }
+    test "A tom no le conviene comer un raton de 50g a una distancia de 500 m" {
+        assert.notThat(Ejercitacion.tom.meConvieneComerRatonA(raton,500))
+    }
+}
